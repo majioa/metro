@@ -1,0 +1,6 @@
+#windows object files
+*.obj
+*.exe
+
+#vim backup files
+*~
