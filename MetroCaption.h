@@ -13,10 +13,10 @@
 class PACKAGE TMetroCaption : public TGraphicControl
 {
 private:
-  Graphics::TBitmap *FBmp;
-//  TMetroData *FMetroData;
+  Graphics::TBitmap * FBmp;
+  TMetroData *FMetroData;
   int FCaptionSize;
-  TStringList *FWords;
+  TStringList * FWords;
   int FBorderWidth;
   TColor FBorderColor;
   int FTopShift;
@@ -25,7 +25,7 @@ private:
   int FRightShift;
 
   void __fastcall SetCaptionSize(int value);
-//  void __fastcall SetMetroData(TMetroData * value);
+  void __fastcall SetMetroData(TMetroData * value);
   void __fastcall Paint();
   void __fastcall MapCaptionData();
   void __fastcall SetMetroCaption(AnsiString value);
@@ -50,7 +50,7 @@ public:
   __property int RightShift  = { read=FRightShift, write=SetRightShift };
 __published:
   __property int CaptionSize  = { read=FCaptionSize, write=SetCaptionSize };
-//  __property TMetroData * MetroData  = { read=FMetroData, write=SetMetroData };
+  __property TMetroData * MetroData  = { read=FMetroData, write=SetMetroData };
   __property Color;
   __property Constraints;
   __property Height;
@@ -83,3 +83,4 @@ __published:
 };
 //---------------------------------------------------------------------------
 #endif
+ 

@@ -11,8 +11,8 @@
     <DEFFILE value=""/>
     <RESDEPEN value="$(RESFILES) MetroUnit.dfm"/>
     <LIBFILES value=""/>
-    <LIBRARIES value="PSKRLIB.lib MetroLib.lib"/>
-    <SPARELIBS value="VCL50.lib MetroLib.lib VCLX50.lib PSKRLIB.lib"/>
+    <LIBRARIES value="MetroLib.lib"/>
+    <SPARELIBS value="VCL50.lib MetroLib.lib"/>
     <PACKAGES value="VCL50.bpi VCLX50.bpi bcbsmp50.bpi VCLDB50.bpi VCLADO50.bpi ibsmp50.bpi 
       VCLBDE50.bpi VCLDBX50.bpi QRPT50.bpi TEEUI50.bpi TEEDB50.bpi TEE50.bpi 
       DSS50.bpi TEEQR50.bpi VCLIB50.bpi VCLMID50.bpi VCLIE50.bpi INETDB50.bpi 
@@ -28,13 +28,12 @@
     <USERDEFINES value="_DEBUG"/>
     <SYSDEFINES value="_RTLDLL;NO_STRICT;USEPACKAGES"/>
     <MAINSOURCE value="Metro.cpp"/>
-    <INCLUDEPATH value="$(BCB)\include;$(BCB)\include\vcl;..\pskrlib"/>
-    <LIBPATH value="$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <INCLUDEPATH value="..\Lib;$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="..\Lib;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib"/>
     <WARNINGS value="-w-par"/>
   </MACROS>
   <OPTIONS>
-    <IDLCFLAGS value="-I$(BCB)\include -I$(BCB)\include\vcl -I..\pskrlib -src_suffix cpp 
-      -D_DEBUG -boa"/>
+    <IDLCFLAGS value="-I..\Lib -I$(BCB)\include -I$(BCB)\include\vcl -src_suffix cpp -D_DEBUG -boa"/>
     <CFLAG1 value="-Od -H=$(BCB)\lib\vcl50.csm -Hc -Vx -Ve -X- -r- -a8 -b- -k -y -v -vi- -c 
       -tW -tWM"/>
     <PFLAGS value="-N2OBJS -N0OBJS -$YD -$W -$O- -v -JPHNE -M"/>
@@ -76,17 +75,15 @@ ProductVersion=1.0.0.0
 Comments=
 
 [HistoryLists\hlIncludePath]
-Count=5
-Item0=$(BCB)\include;$(BCB)\include\vcl;..\pskrlib
-Item1=$(BCB)\include;$(BCB)\include\vcl;C:\Work\Projects\pskrlib
-Item2=..\Lib;$(BCB)\include;$(BCB)\include\vcl
-Item3=$(BCB)\include;$(BCB)\include\vcl
-Item4=;$(BCB)\include;$(BCB)\include\vcl
+Count=3
+Item0=..\Lib;$(BCB)\include;$(BCB)\include\vcl
+Item1=$(BCB)\include;$(BCB)\include\vcl
+Item2=;$(BCB)\include;$(BCB)\include\vcl
 
 [HistoryLists\hlLibraryPath]
 Count=3
-Item0=$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
-Item1=..\Lib;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item0=..\Lib;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Item1=$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
 Item2=;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
 
 [HistoryLists\hlDebugSourcePath]

@@ -6,10 +6,10 @@
 #include "MetroUnit.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
-/*#pragma link "MetroData"
+#pragma link "MetroData"
 #pragma link "MetroChart"
 #pragma link "MetroParams"
-#pragma link "MetroCaption"*/
+#pragma link "MetroCaption"
 #pragma resource "*.dfm"
 TMetroForm *MetroForm;
 //---------------------------------------------------------------------------

@@ -37,20 +37,19 @@ __fastcall TMetroCaption::~TMetroCaption()
   delete FBmp;
 }
 
-/*void __fastcall TMetroCaption::SetMetroData(TMetroData * value)
+void __fastcall TMetroCaption::SetMetroData(TMetroData * value)
 {
   if(FMetroData == value)
     return;
   FMetroData = value;
-} */
+}
 
 void __fastcall TMetroCaption::Paint()
 {
   if(!Caption.IsEmpty())
     {
     TRect rect = ::Rect(0,0,FBmp->Width,FBmp->Height);
-    Canvas->BrushCopy(rect,FBmp,rect,clWhite);
-//    Canvas->BrushCopy(rect,FBmp,rect,FMetroData->Color);
+    Canvas->BrushCopy(rect,FBmp,rect,FMetroData->Color);
     }
 }
 

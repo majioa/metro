@@ -16,18 +16,16 @@ object MetroForm: TMetroForm
   PixelsPerInch = 96
   TextHeight = 13
   object MetroChart: TMetroChart
-    Top = 58
+    Top = 30
     Width = 334
-    Height = 227
-    MetroParams = MetroParams
-    MetroData = MetroData
+    Height = 255
     Align = alClient
   end
   object Panel1: TPanel
     Left = 0
     Top = 0
     Width = 334
-    Height = 58
+    Height = 30
     Align = alTop
     BevelInner = bvRaised
     BevelOuter = bvNone
@@ -35,9 +33,8 @@ object MetroForm: TMetroForm
     object Load: TSpeedButton
       Left = 4
       Top = 4
-      Width = 50
-      Height = 50
-      Caption = 'Open'
+      Width = 23
+      Height = 22
       Flat = True
       Glyph.Data = {
         16060000424D1606000000000000360400002800000015000000140000000100
@@ -89,15 +86,13 @@ object MetroForm: TMetroForm
         F7F7F7F7F7FFFFFFF7F7F7F7F7F7F7000000F7F7F7F7F7F7F7F7F7F7F7F7F7F7
         F7F7F7F7F7F7F7000000F7F7F7F7F7F7F7F7F7F7F7F7F7F7F7F7F7F7F7F7F700
         0000F7F7F7F7F7F7F7F7F7F7F7F7F7F7F7F7F7F7F7F7F7000000}
-      Layout = blGlyphTop
       OnClick = LoadClick
     end
     object Exit: TSpeedButton
-      Left = 54
+      Left = 27
       Top = 4
-      Width = 50
-      Height = 50
-      Caption = 'Exit'
+      Width = 23
+      Height = 22
       Flat = True
       Glyph.Data = {
         16060000424D1606000000000000360400002800000015000000140000000100
@@ -149,7 +144,6 @@ object MetroForm: TMetroForm
         F7F7F7F7F7F7FFFFF7F7FFFFF7F7F7000000F7F7F7F7F7F7F7F7F7F7F7FFFFF7
         F7F7F7FFFFF7F7000000F7F7F7F7F7F7F7F7F7F7F7F7F7F7F7F7F7F7F7F7F700
         0000F7F7F7F7F7F7F7F7F7F7F7F7F7F7F7F7F7F7F7F7F7000000}
-      Layout = blGlyphTop
       OnClick = ExitClick
     end
   end
@@ -171,7 +165,7 @@ object MetroForm: TMetroForm
       '.mcb)|*.mcb|All files (*.*)|*.*'
     Title = 'Open Metro Chart'
     Left = 8
-    Top = 72
+    Top = 40
   end
   object MetroParams: TMetroParams
     StationRadius = 5
@@ -179,12 +173,11 @@ object MetroForm: TMetroForm
     LineWidth = 8
     PassageWidth = 4
     Left = 8
-    Top = 104
+    Top = 72
   end
   object MetroData: TMetroData
-    OnLoadComplete = MetroDataLoadComplete
     LegendNameAlign = naRight
     Left = 8
-    Top = 136
+    Top = 112
   end
 end

@@ -4,16 +4,17 @@
   <MACROS>
     <VERSION value="BCB.05.03"/>
     <PROJECT value="MetroLib.bpl"/>
-    <OBJFILES value="MetroLib.obj MetroChart.obj"/>
+    <OBJFILES value="OBJS\MetroLib.obj OBJS\MetroData.obj OBJS\MetroChart.obj 
+      OBJS\MetroParams.obj OBJS\MetroCaption.obj"/>
     <RESFILES value="MetroLib.res"/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>
     <DEFFILE value=""/>
     <RESDEPEN value="$(RESFILES)"/>
     <LIBFILES value=""/>
-    <LIBRARIES value="VCLX50.lib"/>
-    <SPARELIBS value="VCL50.lib pskrlib.lib VCLX50.lib"/>
-    <PACKAGES value="vcl50.bpi pskrlib.bpi"/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value="VCL50.lib"/>
+    <PACKAGES value="vcl50.bpi"/>
     <PATHCPP value=".;"/>
     <PATHPAS value=".;"/>
     <PATHRC value=".;"/>
@@ -24,19 +25,18 @@
     <USERDEFINES value="_DEBUG"/>
     <SYSDEFINES value="_RTLDLL;NO_STRICT;USEPACKAGES"/>
     <MAINSOURCE value="MetroLib.cpp"/>
-    <INCLUDEPATH value="$(BCB)\include;$(BCB)\include\vcl;..\PSKRLIB"/>
-    <LIBPATH value="$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\projects\lib"/>
+    <INCLUDEPATH value="$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="..\Lib;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib"/>
     <WARNINGS value="-w-par"/>
   </MACROS>
   <OPTIONS>
-    <IDLCFLAGS value="-I$(BCB)\include -I$(BCB)\include\vcl -I..\PSKRLIB -src_suffix cpp 
-      -D_DEBUG -boa"/>
+    <IDLCFLAGS value="-I$(BCB)\include -I$(BCB)\include\vcl -src_suffix cpp -D_DEBUG -boa"/>
     <CFLAG1 value="-Od -H=$(BCB)\lib\vcl50.csm -Hc -Vx -Ve -X- -r- -a8 -b- -k -y -v -vi- -c 
       -tWM"/>
-    <PFLAGS value="-$YD -$W -$O- -v -JPHNE -M"/>
+    <PFLAGS value="-N2OBJS -N0OBJS -$YD -$W -$O- -v -JPHNE -M"/>
     <RFLAGS value=""/>
     <AFLAGS value="/mx /w2 /zd"/>
-    <LFLAGS value="-D&quot;&quot; -aa -Tpp -x -Gn -Gl -Gi -v"/>
+    <LFLAGS value="-IOBJS -D&quot;Metro Components&quot; -aa -Tpp -x -Gn -Gl -Gi -v"/>
   </OPTIONS>
   <LINKER>
     <ALLOBJ value="c0pkg32.obj $(PACKAGES) Memmgr.Lib sysinit.obj $(OBJFILES)"/>
@@ -50,19 +50,19 @@ AutoIncBuild=0
 MajorVer=1
 MinorVer=0
 Release=0
-Build=0
+Build=1
 Debug=0
 PreRelease=0
 Special=0
 Private=0
-DLL=0
+DLL=1
 Locale=1049
 CodePage=1251
 
 [Version Info Keys]
 CompanyName=
 FileDescription=
-FileVersion=1.0.0.0
+FileVersion=1.0.0.1
 InternalName=
 LegalCopyright=
 LegalTrademarks=
@@ -72,13 +72,12 @@ ProductVersion=1.0.0.0
 Comments=
 
 [HistoryLists\hlIncludePath]
-Count=2
-Item0=$(BCB)\include;$(BCB)\include\vcl;C:\Work\Projects\PSKRLIB
-Item1=$(BCB)\include;$(BCB)\include\vcl
+Count=1
+Item0=$(BCB)\include;$(BCB)\include\vcl
 
 [HistoryLists\hlLibraryPath]
 Count=2
-Item0=$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\projects\lib
+Item0=..\Lib;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
 Item1=$(BCB)\lib\obj;$(BCB)\lib
 
 [HistoryLists\hlDebugSourcePath]
@@ -89,12 +88,21 @@ Item0=$(BCB)\source\vcl
 Count=1
 Item0=_DEBUG
 
+[HistoryLists\hlIntOutputDir]
+Count=1
+Item0=OBJS
+
+[HistoryLists\hIBPIOutputDir]
+Count=2
+Item0=C:\Work\Projects\Metro\
+Item1=C:\Work\Projects\Metro
+
 [Debugging]
 DebugSourceDirs=$(BCB)\source\vcl
 
 [Parameters]
 RunParams=
-HostApplication=
+HostApplication=C:\Work\Projects\Metro\Metro.exe
 RemoteHost=
 RemotePath=
 RemoteDebug=0

@@ -4,8 +4,10 @@
 #pragma hdrstop
 USERES("MetroLib.res");
 USEPACKAGE("vcl50.bpi");
-USEPACKAGE("pskrlib.bpi");
+USEUNIT("MetroData.cpp");
 USEUNIT("MetroChart.cpp");
+USEUNIT("MetroParams.cpp");
+USEUNIT("MetroCaption.cpp");
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 //---------------------------------------------------------------------------
@@ -19,3 +21,5 @@ int WINAPI DllEntryPoint(HINSTANCE hinst, unsigned long reason, void*)
   return 1;
 }
 //---------------------------------------------------------------------------
+
+
